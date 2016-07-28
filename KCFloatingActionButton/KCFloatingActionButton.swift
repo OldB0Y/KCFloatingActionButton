@@ -7,7 +7,7 @@
 
 import UIKit
 
-public enum KCFABOpenAnimationType {
+@objc public enum KCFABOpenAnimationType : Int {
     case Pop
     case Fade
     case SlideLeft
