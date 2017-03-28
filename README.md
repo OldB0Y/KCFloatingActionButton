@@ -1,5 +1,5 @@
 # KCFloatingActionButton
-![Swift 2.0](https://img.shields.io/badge/Swift-2.0-orange.svg)
+![Swift 3.0](https://img.shields.io/badge/Swift-3.0-orange.svg)
 [![Version](https://img.shields.io/cocoapods/v/KCFloatingActionButton.svg?style=flat)](http://cocoapods.org/pods/kcfloatingactionbutton)
 [![License](https://img.shields.io/cocoapods/l/KCFloatingActionButton.svg?style=flat)](http://cocoapods.org/pods/kcfloatingactionbutton)
 [![Platform](https://img.shields.io/cocoapods/p/KCFloatingActionButton.svg?style=flat)](http://cocoapods.org/pods/kcfloatingactionbutton)
@@ -11,15 +11,15 @@ Simple Floating Action Button for iOS
 <img src="https://github.com/kciter/KCFloatingActionButton/raw/master/Images/preview.gif" width='187' alt="Preview gif">
 
 ## Requirements
-* iOS 8.0+
-* Swift 2.2
-* Xcode 7
+* iOS 9.0+
+* Swift 3.0
+* Xcode 8
 
 ## Installation
 ### CocoaPods
 ```ruby
 use_frameworks!
-pod "KCFloatingActionButton"
+pod "KCFloatingActionButton", "~> 2.2.0"
 ```
 ### Carthage
 ```ruby
@@ -119,6 +119,21 @@ item.title = @"Custom item";
 ```
 <img src="https://github.com/kciter/KCFloatingActionButton/raw/master/Images/custom_item.png" width='187' alt="Use custom item">
 
+### Sticky
+You can use the `sticky` property.
+```swift
+fab.sticky = true // sticking to parent UIScrollView(also UITableView, UICollectionView)
+scrollView.addSubview(fab)
+```
+
+### Friendly Tap
+You can use the `friendlyTap` property.
+```swifty
+fab.friendlyTap = true
+scrollView.addSubview(fab)
+```
+With the default location of the frame, the button is now tappable until the right and rightbottom of the screen. This prevents tapping behind it by accident.
+
 ### Animation type
 <table>
 <tr>
@@ -137,6 +152,9 @@ item.title = @"Custom item";
 <td><img src="https://github.com/kciter/KCFloatingActionButton/raw/master/Images/none_ani.gif" width='187' alt="None animation gif"></td>
 </tr>
 </table>
+
+## ToDo
+* [ ] Labels to come at the right hand side of the FAB Item menu.
 
 ## License
 The MIT License (MIT)
